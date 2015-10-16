@@ -14,6 +14,6 @@ object AllEuler {
         case eulerSolution: EulerSolution => eulerSolution
         case _ => throw new ClassCastException
       }
-    }).sortBy(eulerSolution => eulerSolution.problemNumber).foreach(eulerSolution => eulerSolution.run())
+    }).sortBy(eulerSolution => eulerSolution.problemNumber).filter(p => p.problemNumber > 2).foreach(eulerSolution => eulerSolution.run())
   }
 }
