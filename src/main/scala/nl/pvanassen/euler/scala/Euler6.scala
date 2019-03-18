@@ -1,4 +1,4 @@
-package com.pvanassen.euler.scala
+package nl.pvanassen.euler.scala
 
 import scala.language.implicitConversions
 
@@ -9,8 +9,11 @@ import scala.language.implicitConversions
  */
 class Euler6 extends EulerSolution {
   val problemNumber = 6
+
   protected def execute(): String ={
-    val range = (1 to 100)
-    return ((range.sum * range.sum) - range.map(t => t * t).sum).toString
+    val range = 1 to 100
+
+    ((range.sum * range.sum) - range.map(t => t * t).sum)
+      .toString
   }
 }
